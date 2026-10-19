@@ -1,0 +1,14 @@
+cd /d "D:\CSE 420 LABS\LAB 4\Group_09"
+
+yacc -d -y --debug --verbose Group_09.y
+g++ -w -c -o y.o y.tab.c
+flex Group_09.l
+g++ -fpermissive -w -c -o l.o lex.yy.c
+g++ y.o l.o -o two_pass_compiler.exe
+two_pass_compiler.exe InputOutput\input3.c
+
+.\two_pass_compiler.exe .\input
+
+
+
+del /q code.txt error.txt log.txt lex.yy.c y.tab.c y.tab.h y.output l.o y.o two_pass_compiler.exe

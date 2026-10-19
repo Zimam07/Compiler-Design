@@ -1,0 +1,16 @@
+cd /d "D:\CSE 420 LABS\LAB 2\Group_09"
+
+yacc -d -y --debug --verbose Group_09.y
+g++ -w -c -o y.o y.tab.c
+flex Group_09.l
+g++ -fpermissive -w -c -o l.o lex.yy.c
+g++ y.o l.o -o a.exe
+
+a.exe "InputOutput\input1.c"
+type Group_09_log.txt
+
+
+
+cd /d "D:\CSE 420 LABS\Lab2-Symbol Table Generation-20260711T071545Z-2-001\Group_09"
+a.exe input
+type Group_09_log.txt

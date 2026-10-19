@@ -1,0 +1,13 @@
+IN GIT BASH
+
+cd /d/CSE\ 420\ LABS/LAB\ 3/Group_09
+ls
+bash script.sh
+bash script.sh InputOutput/input1.c
+
+
+
+./script.sh
+cd /d/CSE\ 420\ LABS/LAB\ 3/Group_09
+
+Remove-Item y.tab.c,y.tab.h,lex.yy.c,y.o,l.o,a.exe,y.output,Group_09_log.txt,Group_09_error.txt -ErrorAction SilentlyContinue
